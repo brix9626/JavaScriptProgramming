@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	<script>
+		function fun1(){
+			var img1 = document.querySelector("#img1");
+			console.log(img1);
+			
+			img1.src = "../common/image/GitCat.png"
+		}
+		function fun2(){
+			var imgList = document.querySelectorAll(".img2");
+		
+			for(var i=0;i<imgList.length;i++){
+				imgList[i].src="../common/image/cat1.jpg";
+			}
+		}
+		 function fun3(){
+			var imgList = document.getElementsByTagName("img");
+			for(var i=0;i<imgList.length;i++){
+				imgList[i].src="../common/image/cat1.jpg";
+			}
+		} 
+		function fun4(){
+			var imgList = document.querySelectorAll("#div1 img");
+			for(var i=0; i<imgList.length;i++){
+				imgList[i].src = "../common/image/Jellyfish.jpg";
+			}
+		} 
+		function fun5(){
+			var inputMid = document.querySelector("#joinForm input[name=mid]");
+			var inputCheckHobby = document.querySelectorAll("#joinForm input[name=hobby]:Checked");
+			console.log(inputMid);
+			
+			var inputPass = document.querySelector("#joinForm input[name=mpassword]")
+			var password = inputPass.value;
+			if(password == "") {
+				window.alert("패스워드 안 넣을래?");
+			} else{
+				if(password.length < 8) {
+					window.alert("패스워드 똑바로 안 넣을래?");
+			}
+			
+			var inputHobby = document.querySelectorAll("#joinForm input[name=hobby]");
+			var inputHobbyChecked = document.querySelectorAll("#joinForm input[name=hobby]");
+			
+			
+			console.log(inputCheckHobby); 
+			}	
+			
+		function fun6(){
+			var form = documenet.joinForm;				
+			var mid = documenet.joinForm.mid.value;
+			console.log("mid: " + mid);				
+			
+			var mpassword = documenet.joinForm.mpassword.value;
+			console.log("mpassword: " + mpassword);
+			}
+	</script>
+	</head>
+	<body>
+		<button onclick="fun1()">아이디로 찾기</button><br/>
+		<button onclick="fun2()">클래스로 찾기</button><br/>
+		<button onclick="fun3()">태그명으로 찾기</button><br/>
+		<button onclick="fun4()">내부 찾기</button><br/>
+		<button onclick="fun5()">폼 양식 찾기</button><br/>
+		<button onclick="fun6()">폼 양식 찾기</button><br/>
+		
+		<hr/>
+		
+		<img id="img1" src="../common/image/cat1.jpg" width="200"/>
+		
+		<br/>
+		
+		<img class="img2" src="../common/image/NaverLogo.png" width="200"/>
+		<img class="img2" src="../common/image/NaverLogo.png" width="200"/>
+		
+		<div id="div1">
+			<img class="img2" src="../common/image/NaverLogo.png" width="200"/>
+			<img class="img2" src="../common/image/NaverLogo.png" width="200"/>
+			<br/>
+			
+			<form id="joinForm" name="jointForm">
+				아이디 : <input name="mid" type="text"/><br/>
+				비밀번호 : <input name="password" type="password"/><br/>
+				취미 : <input name="hobby" type="checkbox"/>게임
+					 <input name="hobby" type="checkbox"/>영화
+					 <input name="hobby" type="checkbox"/>여행
+					 <input name="hobby" type="checkbox"/>코딩
+			
+			</form>
+		</div>
+	</body>
+</html>

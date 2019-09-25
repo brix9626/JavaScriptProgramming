@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<script>
+		function fun1(){
+			var password = "12345678";
+			console.log(password.length)
+		}
+		function fun2(){
+			var ssn = "123456-1234567";
+			var sex = ssn.charAt(7);
+			if(sex == "1" || sex == "3"){
+				console.log("남자");
+			}else{
+				console.log("여자");
+			}
+		}
+		function fun3(){
+			var ssn = "123456-1234567";
+			var year = ssn.substr(0,2);//0자리부터 2개
+			var month = ssn.substring(2,4);//2자리에서 4앞까지(3)
+			var date = ssn.substr(4,2);//4자리에서부터 2개
+			console.log(year + "." + month + "." + date);
+		}
+		function fun4(){
+			var now = new Date();
+			var year = now.getFullYear();
+			var month = now.getMonth();
+			var day = now.getDate();
+			console.log(year + "." + month + "." + day);
+		}
+		function fun5(radius){
+			var result = radius * radius * Math.PI;
+			console.log(result);
+		}
+	</script>
+	<body>
+		<button onclick="fun1()">String length</button><br/>
+		<button onclick="fun2()">String charAt</button><br/>
+		<button onclick="fun3()">String substr,substring</button><br/>
+		<button onclick="fun4()">String Date</button><br/>
+		<button onclick="fun5(8)">Math</button><br/>
+
+	</body>
+</html>

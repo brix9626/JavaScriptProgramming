@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script>
+		fun1();
+		 function fun1(){
+			console.log("Hello JavasScript");		 
+		 }
+		 function fun2(){
+			 var x = 10;
+			 var y = 20;
+			 var result = x+y;
+			 console.log("result : "+ result)
+		 }
+		 function fun3(){
+			 return false;
+		 }
+		</script>
+	</head>
+	<body>
+		<button onClick="fun1()">fun1호출()</button><br/>
+		<button onClick="fun2()">fun2호출()</button><br/>
+		<a href="javascript:fun1()">
+			<img src="../common/image/Lighthouse.jpg"/>
+		</a><br/>
+		
+		<a href="http://www.apache.org" onclick="return fun3()">네이버</a>
+		<!-- form태그는 사용자의 입력정보를 받아내는 FORM -->
+		<form action="http://www.apache.org" onsubmit="return fun3()">
+			<input type="submit" value="Move"/>
+		</form>
+		<br/>
+		<script>
+			function zomin(){
+				for(int i=500;i<=700;i++){
+					document.getElementById("img").style.width = i;					
+				}
+				
+				
+			}
+			 function zomout(){
+				 document.getElementById("img").style.width = "500px";
+			} 
+		</script>
+		<img src="../common/image/Desert.jpg" id="img" width="500" onmouseenter="zomin()" onmouseleave="zomout()"/>
+	</body>
+</html>
