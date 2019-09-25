@@ -26,21 +26,22 @@
 				var inputMid = $("#joinForm input[name=mid]");
 				console.log(inputMid.val());
 				
-				var inputPass = $("#joinForm input[name=mpassword]")
+				var inputPass = $("#joinForm input[name=password]")
 				var password = inputPass.val();
+				alert(password);
 				if(password == "") {
 					window.alert("패스워드 안 넣을래?");
 				} else{
 					if(password.length < 8) {
 						window.alert("패스워드 똑바로 안 넣을래?");
+					}
 				}
-				}
-			}
-				/*var inputHobby = document.querySelectorAll("#joinForm input[name=hobby]");
-				var inputHobbyChecked = document.querySelectorAll("#joinForm input[name=hobby]");
+				var inputHobby = $("#joinForm input[name=hobby]");
+				var inputHobbyChecked = $("#joinForm input[name=hobby]:Checked");
 				for(var i=0; i<inputHobbyChecked.length; i++){		
-				console.log(inputHobbyChecked[i].value); 
-				}	*/
+					console.log(inputHobbyChecked[i].value); 
+				}	
+			}
 			
 
 			</script>
@@ -71,11 +72,11 @@
 	
 	<form id="joinForm" name="jointForm">
 		아이디 : <input name="mid" type="text"/><br/>
-		비밀번호 : <input name="password" type="password"/><br/>
-		취미 : <input name="hobby" type="checkbox"/>게임
-			 <input name="hobby" type="checkbox"/>영화
-			 <input name="hobby" type="checkbox"/>여행
-			 <input name="hobby" type="checkbox"/>코딩
+		비밀번호 : <input name="password" type="password" value="12413523524"/><br/>
+		취미 : <input name="hobby" type="checkbox" value="Game" checked/>게임
+			 <input name="hobby" type="checkbox" value="Movie" checked/>영화
+			 <input name="hobby" type="checkbox" value="Traver"/>여행
+			 <input name="hobby" type="checkbox" value="Coding"/>코딩
 	
 	</form>
 </div>
