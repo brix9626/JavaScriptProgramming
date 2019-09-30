@@ -15,7 +15,7 @@
 			 console.log("result : "+ result)
 		 }
 		 function fun3(){
-			 return false;
+			 return true;
 		 }
 		</script>
 	</head>
@@ -31,19 +31,5 @@
 		<form action="http://www.apache.org" onsubmit="return fun3()">
 			<input type="submit" value="Move"/>
 		</form>
-		<br/>
-		<script>
-			function zomin(){
-				for(int i=500;i<=700;i++){
-					document.getElementById("img").style.width = i;					
-				}
-				
-				
-			}
-			 function zomout(){
-				 document.getElementById("img").style.width = "500px";
-			} 
-		</script>
-		<img src="../common/image/Desert.jpg" id="img" width="500" onmouseenter="zomin()" onmouseleave="zomout()"/>
 	</body>
 </html>
